@@ -20,28 +20,36 @@
             border-bottom: 1px solid #ffb6c1;
         }
         header h1 { margin: 0; font-size: 24px; }
+
+        /* МЕНЮ СЛЕВА В СТОЛБИК */
         nav {
             background: #ffd6e0;
             padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ffb6c1;
+            float: left;
+            width: 160px;
+            min-height: 100vh;
+            border-right: 1px solid #ffb6c1;
         }
         nav a {
-            display: inline-block;
+            display: block;
             color: #c71585;
             text-decoration: none;
             font-weight: bold;
-            padding: 6px 10px;
-            font-size: 16px;
+            padding: 8px 5px;
+            font-size: 15px;
+            border-bottom: 1px solid #ffb6c1;
         }
         nav a:hover { text-decoration: underline; }
+        nav a:last-child { border-bottom: none; }
+
         .content {
+            margin-left: 160px;
             padding: 20px;
             text-align: center;
-            background: #ffd6e0;
         }
         .content h2 { color: #c71585; font-size: 24px; }
-        .content p { font-size: 16px; }
+        .content p { font-size: 16px; color: #a01060; }
+
         footer {
             background: #ffd6e0;
             color: #c71585;
@@ -49,17 +57,19 @@
             padding: 12px;
             border-top: 1px solid #ffb6c1;
             font-size: 14px;
+            clear: both;
+            margin-left: 160px;
         }
 
+        /* НА ТЕЛЕФОНЕ — ТО ЖЕ САМОЕ, ТОЛЬКО КОМПАКТНЕЕ */
         @media (max-width: 768px) {
             header h1 { font-size: 20px; }
-            nav { padding: 8px; text-align: left; }
-            nav a { display: block; padding: 8px 10px; font-size: 15px; border-bottom: 1px solid #ffb6c1; }
-            nav a:last-child { border-bottom: none; }
-            .content { padding: 15px; }
-            .content h2 { font-size: 20px; }
-            .content p { font-size: 14px; }
-            footer { font-size: 12px; padding: 10px; }
+            nav { width: 130px; padding: 8px; }
+            nav a { font-size: 13px; padding: 6px 4px; }
+            .content { margin-left: 130px; padding: 15px; }
+            .content h2 { font-size: 18px; }
+            .content p { font-size: 13px; }
+            footer { margin-left: 130px; font-size: 11px; padding: 10px; }
         }
     </style>
 </head>
