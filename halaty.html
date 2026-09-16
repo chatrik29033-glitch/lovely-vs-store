@@ -50,18 +50,19 @@
             padding-bottom: 8px;
         }
 
+        /* ТОВАРЫ СЛЕВА */
         .tovary {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px 0;
-            justify-content: center;
+            gap: 15px;
+            padding: 15px 0;
+            justify-content: flex-start;
         }
         .tovar {
             background: #fff0f5;
-            border-radius: 15px;
-            padding: 15px;
-            width: 220px;
+            border-radius: 12px;
+            padding: 10px;
+            width: 160px;
             text-align: center;
             border: 1px solid #ffb6c1;
             transition: 0.3s;
@@ -69,21 +70,22 @@
         .tovar:hover { transform: scale(1.05); }
         .tovar img {
             width: 100%;
-            height: 260px;
+            height: 180px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 8px;
         }
-        .tovar h3 { color: #c71585; margin: 10px 0 5px; }
-        .tovar p { margin: 5px 0; color: #a01060; }
+        .tovar h3 { color: #c71585; margin: 8px 0 4px; font-size: 14px; }
+        .tovar p { margin: 4px 0; color: #a01060; font-size: 13px; }
         .tovar a {
             display: inline-block;
             background: #c71585;
             color: white;
-            padding: 8px 20px;
-            border-radius: 10px;
+            padding: 6px 14px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 8px;
+            font-size: 12px;
         }
         .tovar a:hover { background: #a01060; }
 
@@ -108,9 +110,12 @@
                 border-bottom: 1px solid #ffb6c1;
             }
             nav a { font-size: 14px; padding: 8px 10px; }
-            .catalog { margin-left: 0; padding: 15px; }
-            .tovar { width: 160px; padding: 10px; }
-            .tovar img { height: 200px; }
+            .catalog { margin-left: 0; padding: 10px; }
+            .tovar { width: 130px; padding: 8px; }
+            .tovar img { height: 150px; }
+            .tovar h3 { font-size: 12px; }
+            .tovar p { font-size: 11px; }
+            .tovar a { font-size: 11px; padding: 5px 10px; }
             footer { margin-left: 0; font-size: 12px; }
         }
     </style>
@@ -130,15 +135,13 @@
     <div class="catalog">
         <h2>Халати</h2>
         <div class="tovary">
-
-            <!-- ЧЁРНЫЙ ХАЛАТ -->
-            <div class="tovar">
+<div class="tovar">
                 <img src="img/halat-black.jpg" alt="Чорний халат">
                 <h3>Чорний халат</h3>
                 <p>Ціна: 2500</p>
                 <a href="halat-black.html">Детальніше →</a>
             </div>
-<!-- РОЗОВЫЙ ХАЛАТ -->
+
             <div class="tovar">
                 <img src="img/halat-pink.jpg" alt="Рожевий халат">
                 <h3>Рожевий халат</h3>
@@ -146,7 +149,6 @@
                 <a href="halat-pink.html">Детальніше →</a>
             </div>
 
-            <!-- БЕЛЫЙ ХАЛАТ -->
             <div class="tovar">
                 <img src="img/halat-white.jpg" alt="Білий халат">
                 <h3>Білий халат</h3>
