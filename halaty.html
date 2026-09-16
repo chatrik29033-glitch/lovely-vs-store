@@ -50,19 +50,21 @@
             padding-bottom: 8px;
         }
 
-        /* ТОВАРЫ СЛЕВА */
+        /* ТОВАРЫ В СТРОЧКУ */
         .tovary {
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
+            flex-wrap: nowrap;
+            gap: 8px;
             padding: 15px 0;
             justify-content: flex-start;
+            overflow-x: auto;
         }
         .tovar {
             background: #fff0f5;
-            border-radius: 12px;
-            padding: 10px;
-            width: 160px;
+            border-radius: 10px;
+            padding: 8px;
+            width: 120px;
+            min-width: 120px;
             text-align: center;
             border: 1px solid #ffb6c1;
             transition: 0.3s;
@@ -70,22 +72,22 @@
         .tovar:hover { transform: scale(1.05); }
         .tovar img {
             width: 100%;
-            height: 180px;
+            height: 120px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 6px;
         }
-        .tovar h3 { color: #c71585; margin: 8px 0 4px; font-size: 14px; }
-        .tovar p { margin: 4px 0; color: #a01060; font-size: 13px; }
+        .tovar h3 { color: #c71585; margin: 6px 0 3px; font-size: 11px; }
+        .tovar p { margin: 3px 0; color: #a01060; font-size: 10px; }
         .tovar a {
             display: inline-block;
             background: #c71585;
             color: white;
-            padding: 6px 14px;
-            border-radius: 8px;
+            padding: 5px 10px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 8px;
-            font-size: 12px;
+            margin-top: 5px;
+            font-size: 10px;
         }
         .tovar a:hover { background: #a01060; }
 
@@ -111,11 +113,11 @@
             }
             nav a { font-size: 14px; padding: 8px 10px; }
             .catalog { margin-left: 0; padding: 10px; }
-            .tovar { width: 130px; padding: 8px; }
-            .tovar img { height: 150px; }
-            .tovar h3 { font-size: 12px; }
-            .tovar p { font-size: 11px; }
-            .tovar a { font-size: 11px; padding: 5px 10px; }
+            .tovar { width: 100px; min-width: 100px; padding: 6px; }
+            .tovar img { height: 100px; }
+            .tovar h3 { font-size: 10px; }
+            .tovar p { font-size: 9px; }
+            .tovar a { font-size: 9px; padding: 4px 8px; }
             footer { margin-left: 0; font-size: 12px; }
         }
     </style>
@@ -131,28 +133,28 @@
         <a href="halaty.html">Халати</a>
         <a href="kontakty.html">Контакти</a>
     </nav>
-
-    <div class="catalog">
+<div class="catalog">
         <h2>Халати</h2>
         <div class="tovary">
-<div class="tovar">
+
+            <div class="tovar">
                 <img src="img/halat-black.jpg" alt="Чорний халат">
                 <h3>Чорний халат</h3>
-                <p>Ціна: 2500</p>
+                <p>2500</p>
                 <a href="halat-black.html">Детальніше →</a>
             </div>
 
             <div class="tovar">
                 <img src="img/halat-pink.jpg" alt="Рожевий халат">
                 <h3>Рожевий халат</h3>
-                <p>Ціна: 2500</p>
+                <p>2500</p>
                 <a href="halat-pink.html">Детальніше →</a>
             </div>
 
             <div class="tovar">
                 <img src="img/halat-white.jpg" alt="Білий халат">
                 <h3>Білий халат</h3>
-                <p>Ціна: 2500</p>
+                <p>2500</p>
                 <a href="halat-white.html">Детальніше →</a>
             </div>
 
