@@ -2,18 +2,31 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOVELY VS STORE</title>
     <style>
+        * { box-sizing: border-box; }
         body { font-family: Arial, sans-serif; margin: 0; background: #ffe4ec; color: #c71585; }
         header { background: #c71585; color: white; padding: 20px; text-align: center; }
         header h1 { margin: 0; font-size: 32px; }
-        nav { background: #ffb6c1; padding: 15px; float: left; width: 200px; min-height: 500px; }
-        nav a { display: block; color: #c71585; text-decoration: none; font-weight: bold; padding: 8px 0; font-size: 18px; }
+        nav { background: #ffb6c1; padding: 15px; text-align: center; }
+        nav a { display: inline-block; color: #c71585; text-decoration: none; font-weight: bold; padding: 8px 12px; font-size: 18px; }
         nav a:hover { text-decoration: underline; }
-        .content { margin-left: 200px; padding: 30px; text-align: center; }
+        .content { padding: 30px; text-align: center; }
         .content h2 { color: #c71585; font-size: 28px; }
         .content p { font-size: 18px; }
-        footer { background: #c71585; color: white; text-align: center; padding: 15px; clear: both; margin-top: 30px; }
+        footer { background: #c71585; color: white; text-align: center; padding: 15px; margin-top: 30px; }
+
+        /* АДАПТИВ ПОД ТЕЛЕФОН */
+        @media (max-width: 768px) {
+            header h1 { font-size: 24px; }
+            nav a { display: block; padding: 10px; font-size: 16px; border-bottom: 1px solid #ffcce0; }
+            nav a:last-child { border-bottom: none; }
+            .content { padding: 20px; }
+            .content h2 { font-size: 22px; }
+            .content p { font-size: 16px; }
+            footer { font-size: 14px; }
+        }
     </style>
 </head>
 <body>
@@ -30,7 +43,7 @@
     <div class="content">
         <h2>Ласкаво просимо!</h2>
         <p>Оригінальна продукція Victoria's Secret</p>
-        <p>Обирайте розділ у меню зліва</p>
+        <p>Обирайте розділ у меню</p>
     </div>
     <footer>Телефон: +380637192661 | Доставка: Нова Пошта</footer>
 </body>
