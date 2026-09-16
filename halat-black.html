@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чорний халат - LOVELY VS STORE</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #ffd6e0;
+            color: #c71585;
+        }
+        header {
+            background: #ffd6e0;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ffb6c1;
+        }
+        header h1 { margin: 0; font-size: 24px; }
+        nav {
+            background: #ffd6e0;
+            padding: 10px;
+            float: left;
+            width: 150px;
+            border-right: 1px solid #ffb6c1;
+            min-height: 400px;
+        }
+        nav a {
+            display: block;
+            color: #c71585;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 7px 5px;
+            font-size: 15px;
+            border-bottom: 1px solid #ffb6c1;
+        }
+        nav a:hover { text-decoration: underline; }
+        nav a:last-child { border-bottom: none; }
+
+        .product {
+            margin-left: 150px;
+            padding: 20px;
+            text-align: center;
+        }
+        .product h2 { color: #c71585; font-size: 24px; margin-top: 0; }
+        .product p { font-size: 16px; color: #a01060; }
+
+        /* ГАЛЕРЕЯ */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .gallery img {
+            width: 200px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #ffb6c1;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            border-color: #c71585;
+        }
+
+        /* УВЕЛИЧЕННАЯ КАРТИНКА (ЛАЙТБОКС) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            border: 3px solid #ffb6c1;
+        }
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #c71585;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .back-btn:hover { background: #a01060; }
+
+        footer {
+            background: #ffd6e0;
+            color: #c71585;
+            text-align: center;
+            padding: 12px;
+            border-top: 1px solid #ffb6c1;
+            font-size: 14px;
+            clear: both;
+            margin-left: 150px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 20px; }
+            nav {
+                float: none;
+                width: 100%;
+                min-height: auto;
+                border-right: none;
+                border-bottom: 1px solid #ffb6c1;
+            }
+            nav a { font-size: 14px; padding: 8px 10px; }
+            .product { margin-left: 0; padding: 15px; }
+.gallery img { width: 140px; height: 180px; }
+            footer { margin-left: 0; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <header><h1>LOVELY VS STORE</h1></header>
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="kosmetika.html">Косметика</a>
+        <a href="parfum.html">Парфуми</a>
+        <a href="pizhama.html">Піжами</a>
+        <a href="bilizna.html">Білизна</a>
+        <a href="halaty.html">Халати</a>
+        <a href="kontakty.html">Контакти</a>
+    </nav>
+
+    <div class="product">
+        <h2>Чорний халат</h2>
+        <p>Опис халата. Гарний, зручний, теплий. 100% бавовна.</p>
+        <p>Ціна: 2500 грн</p>
+
+        <!-- ГАЛЕРЕЯ ФОТОК -->
+        <div class="gallery">
+            <img src="https://www.victoriassecret.com/p/874x1165/png/zz/26/03/06/01/112387316AZQ_OM_F.jpg" alt="Чорний халат - спереду" onclick="openLightbox(this.src)">
+            <img src="https://www.victoriassecret.com/p/874x1165/png/zz/26/01/13/23/112387316AZQ_OM_B.jpg" alt="Чорний халат - збоку" onclick="openLightbox(this.src)">
+            <img src="https://www.victoriassecret.com/p/874x1165/png/zz/26/09/15/00/112910816AZQ_OM_B.jpg" alt="Чорний халат - ззаду" onclick="openLightbox(this.src)">
+        </div>
+
+        <a href="halaty.html" class="back-btn">← Назад до халатів</a>
+    </div>
+
+    <!-- ЛАЙТБОКС -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img src="" alt="Збільшена фотка" id="lightbox-img">
+    </div>
+
+    <footer>Телефон: +380637192661 | Доставка: Нова Пошта</footer>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('active');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

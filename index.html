@@ -21,21 +21,21 @@
         }
         header h1 { margin: 0; font-size: 24px; }
 
-        /* МЕНЮ СЛЕВА В СТОЛБИК */
+        /* МЕНЮ СЛЕВА */
         nav {
             background: #ffd6e0;
             padding: 10px;
             float: left;
-            width: 160px;
-            min-height: 100vh;
+            width: 150px;
             border-right: 1px solid #ffb6c1;
+            min-height: 400px;
         }
         nav a {
             display: block;
             color: #c71585;
             text-decoration: none;
             font-weight: bold;
-            padding: 8px 5px;
+            padding: 7px 5px;
             font-size: 15px;
             border-bottom: 1px solid #ffb6c1;
         }
@@ -43,11 +43,21 @@
         nav a:last-child { border-bottom: none; }
 
         .content {
-            margin-left: 160px;
+            margin-left: 150px;
             padding: 20px;
             text-align: center;
         }
-        .content h2 { color: #c71585; font-size: 24px; }
+
+        /* ФОТКА ПО ЦЕНТРУ */
+        .banner {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 80%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .content h2 { color: #c71585; font-size: 24px; margin-top: 0; }
         .content p { font-size: 16px; color: #a01060; }
 
         footer {
@@ -58,18 +68,24 @@
             border-top: 1px solid #ffb6c1;
             font-size: 14px;
             clear: both;
-            margin-left: 160px;
+            margin-left: 150px;
         }
 
-        /* НА ТЕЛЕФОНЕ — ТО ЖЕ САМОЕ, ТОЛЬКО КОМПАКТНЕЕ */
         @media (max-width: 768px) {
             header h1 { font-size: 20px; }
-            nav { width: 130px; padding: 8px; }
-            nav a { font-size: 13px; padding: 6px 4px; }
-            .content { margin-left: 130px; padding: 15px; }
-            .content h2 { font-size: 18px; }
-            .content p { font-size: 13px; }
-            footer { margin-left: 130px; font-size: 11px; padding: 10px; }
+            nav {
+                float: none;
+                width: 100%;
+                min-height: auto;
+                border-right: none;
+                border-bottom: 1px solid #ffb6c1;
+            }
+            nav a { font-size: 14px; padding: 8px 10px; }
+            .content { margin-left: 0; padding: 15px; }
+            .banner { max-width: 100%; }
+            .content h2 { font-size: 20px; }
+            .content p { font-size: 14px; }
+            footer { margin-left: 0; font-size: 12px; }
         }
     </style>
 </head>
@@ -85,6 +101,10 @@
         <a href="kontakty.html">Контакти</a>
     </nav>
     <div class="content">
+
+        <!-- ФОТКА ПО ЦЕНТРУ, МЕЖДУ ШАПКОЙ И ТЕКСТОМ -->
+        <img class="banner" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXMJl82zR491PCmfoPKUP4wBnE8WFLYHG9rpPopZBg2Q&s=10" alt="LOVELY VS STORE">
+
         <h2>Ласкаво просимо!</h2>
         <p>Оригінальна продукція Victoria's Secret</p>
         <p>Обирайте розділ у меню</p>
